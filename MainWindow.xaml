@@ -1,0 +1,30 @@
+﻿<Window x:Class="bsk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bsk"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="DES" Height="650" Width="850" FontSize="24">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="encodeText" Margin="20"></TextBox>
+        <TextBox Name="encodeKeyText" Margin="20" Grid.Column="1"></TextBox>
+        <Button Grid.ColumnSpan="2" Content="Encode" Grid.Row="1" Margin="20" Width="200" Click="Encode"></Button>
+        <TextBox Name="decodeText" Grid.Row="3" Margin="20"></TextBox>
+        <TextBox Name="decodeKeyText" Grid.Row="3" Margin="20" Grid.Column="1"></TextBox>
+        <TextBox Grid.ColumnSpan="2" IsReadOnly="True" TextWrapping="Wrap" Name="decodeBinText" Grid.Row="2" Margin="20"></TextBox>
+        <Button Grid.ColumnSpan="2" Content="Decode" Width="200" Grid.Row="4" Margin="20" Click="Decode"></Button>
+    </Grid>
+</Window>
